@@ -94,7 +94,7 @@ def handleResiduel(increments, master):
 
 # print("residuel: " + str(handleResiduel(20, master)))
 
-residual = handleResiduel(20, masterDict)
+residual = handleResiduel(75, masterDict)
 
 bfs_result = bfs_residual(masterDict, 'DC-A', 'Zonex', residual)
 if bfs_result:

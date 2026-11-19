@@ -7,7 +7,7 @@ graphe2 = {
 
 
 
-DCA = { "R1": 35, "R2": 78}
+DCA = { "R1": 35, "R2": 25}
 R1 = {"R3" : 58, "Zonex":20}
 R2 = {"R3" : 20, "Zonex":5}    
 R3 = {"Zonex": 40 }
@@ -18,11 +18,11 @@ for key, values in master.items():
     t={}
     #print(key, values)
     for key2, value2 in values.items():
-        print(key2, value2)
+        #print(key2, value2)
         t[key2]=  value2 + 20
     dicoCible[key] = t
 
-print("dicoCible: " + str(dicoCible))
+#print("dicoCible: " + str(dicoCible))
 
 
 def handleResiduel(increments, master):
@@ -31,4 +31,4 @@ def handleResiduel(increments, master):
     for key, values in master.items()  }
     return dicoCible
 
-print("residuel: " + str(handleResiduel(20, master)))
+print("residuel: " + str(handleResiduel(50, master)))
