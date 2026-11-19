@@ -10,5 +10,9 @@
  - la suite des fichier forme une logique d'étape srtucturée par fonction et modules importés 
 
 ###### pas d'installation nécessaire à part python et les lib importées dans les scripts
+- reseau.py est le fichier de première partie de TP
+- min_flow.py la seconde partie
 
-____________________________________________________ enjoy ______________________________
+- partie 2 est juste un brouillon 
+
+_______________________________________________ enjoy ______________________________

@@ -28,6 +28,40 @@ def reconstruire_arcs(source, puits, parent):
     arcs.reverse()
     return arcs
 
+def reconstruire_sommets(source, puits, parent):
+    chemin = []
+    sommet = puits
+
+    while sommet != source:
+        if sommet not in parent or parent[sommet] is None:
+            return None  # Aucun chemin trouvé
+
+        chemin.append(sommet)
+        sommet = parent[sommet]
+
+    chemin.append(source)
+    chemin.reverse()
+    return chemin
+
+def bottleneck (graphe_residuel, chemin):
+    if len(chemin) < 2:
+        raise ValueError("Le chemin doit contenir au moins deux sommets.")
+
+    capacites = []
+
+    for depart, arrivee in zip(chemin, chemin[1:]):
+        capacite = graphe_residuel.get(depart, {}).get(arrivee)
+
+        if capacite is None or capacite <= 0:
+            raise ValueError(
+                f"Aucune capacité résiduelle positive pour {depart} -> {arrivee}"
+            )
+
+        capacites.append(capacite)
+
+    return min(capacites)
+
+
 def trouver_parents(source, puits, graphe, graphe_residuel):
     parent = {source: None}
     file = deque([source])
@@ -41,7 +75,7 @@ def trouver_parents(source, puits, graphe, graphe_residuel):
         for voisin in graphe.get(sommet, {}):
             capacite = graphe_residuel.get(sommet, {}).get(voisin, 0)
 
-            if capacite > 0 and voisin not in parent:
+            if capacite >= 0 and voisin not in parent:
                 parent[voisin] = sommet
                 file.append(voisin)
 
