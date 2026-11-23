@@ -14,7 +14,7 @@ graphe = {
 # print(capacite_minimale_residuelle(graphe, 'DC-A', 'Zonex'))
 
 # retourne la plus petite capacite residuelle du chemin passé en paramètre.
-print(bottleneck(graphe, ['DC-A', 'R1','R3', 'Zonex']))
+#print(bottleneck(graphe, ['DC-A', 'R1','R3', 'Zonex']))
 
 
 
@@ -29,7 +29,7 @@ parent = {
 
 # Flot partiel valide : 20 via R1->Zonex et 30 via R2->Zonex (total = 50)
 flot_valide = {
-    "DC-A": {"R1": 20, "R2": 30},
+    "DC-A": {"R1": 100, "R2": 30},
     "R1": {"R3": 0, "Zonex": 20},
     "R2": {"R3": 0, "Zonex": 30},
     "R3": {"Zonex": 0},
