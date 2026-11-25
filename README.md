@@ -14,7 +14,6 @@
 - la partie 2 du Tp 1  se retrouve dans Flow_TP1 et Flow_TP2 
 
 ### TP2 Dijkstra ====================
-- Chaque partie de ce TP est rangée dnas des répertories indépendants
- - ceci signiifie que vosu pouvez les exécuter sans avoir besoin des codes 
-    - issu des parties antérieures 
-_______________________________________________ enjoy ______________________________
+- Chaque partie de ce TP est rangée dans des répertoires indépendants
+- => ceci signifie que vous pouvez les exécuter sans avoir besoin des codes issus des parties antérieures 
+__ enjoy __
