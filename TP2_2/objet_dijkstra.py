@@ -1,4 +1,4 @@
-from dijkstra import *
+from .dijkstra import *
 
 # test #1 
 g = GrapheReseau()
@@ -11,6 +11,8 @@ g.add_edge("R2", "Clients", cost=1, latency=25, bandwidth=120)
 latence_min, chemin = g.dijkstra("DC", "Clients", weight="latency")
 print(f"Latence minimale : {latence_min} ms")
 print(f"Chemin : {' -> '.join(chemin)}")
+print("====================================/n")
+
 
 # second Test
 g2 = GrapheReseau()

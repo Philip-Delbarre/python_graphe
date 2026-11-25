@@ -7,10 +7,10 @@ G.add_nodes_from(["DC", "R1", "R2", "Clients"])
 
 # Arêtes orientées : (source, cible, {"cost": ..., "latency_ms": ..., "bandwidth": ...})
 edges = [
-    ("DC", "R1", {"cost": 120, "latency_ms": 8, "bandwidth": 4}),
-    ("R1", "Clients", {"cost": 120, "latency_ms": 8, "bandwidth": 4}),
-    ("DC", "R2", {"cost": 120, "latency_ms": 25, "bandwidth": 1}),
-    ("R2", "Clients", {"cost": 120, "latency_ms": 25, "bandwidth": 1}),
+    ("DC", "R1", {"cost": 100, "latency_ms": 6.66, "bandwidth": 3.6}),
+    ("R1", "Clients", {"cost": 100, "latency_ms": 6.66, "bandwidth": 3.6}),
+    ("DC", "R2", {"cost": 100, "latency_ms": 20.8, "bandwidth": 0.8}),
+    ("R2", "Clients", {"cost": 100, "latency_ms": 20.8, "bandwidth": 0.8}),
 ]
 G.add_edges_from(edges)
 
